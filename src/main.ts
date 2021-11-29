@@ -11,10 +11,13 @@ async function bootstrap() {
       options: {
         host: '127.0.0.1',
         port: 3030,
+        header: {
+          "Access-Control-Allow-Methods" : "GET"
+        }
       },
     }
   )
-
-  app.listen(8080);
+  app.enableCors();
+  app.listen(3434);
 }
 bootstrap();
