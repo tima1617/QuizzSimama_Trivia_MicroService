@@ -10,7 +10,7 @@ export class TriviaService {
     constructor(private httpService: HttpService) {}
     
     getQuestionsWithParameters() : Observable<AxiosResponse> {
-        return this.httpService.get('https://opentdb.com/api.php?amount=10', {
+        return this.httpService.get('https://opentdb.com/api.php?amount=3&type=multiple', {
             headers: {
                 'Accept': 'application/json'
             }
